@@ -18,7 +18,6 @@ public class MethodDataSepatu extends DataSepatu {
         System.out.println("==================================================");
         System.out.println("Id    : (masukkan misal Data 1, untuk setiap input");
         System.out.println("SEPATU: SNEAKERS DAN SPORT                        ");
-        System.out.println("(note : tambah nomer di belakang nama sepatu)     ");
         System.out.println("BAHAN : KULIT SAPI & BABI                         ");
         System.out.println("UKURAN: 30 - 45                                   ");
         System.out.println("==================================================");
@@ -78,7 +77,6 @@ public class MethodDataSepatu extends DataSepatu {
         System.out.println("==================================================");
         System.out.println("Id    : (masukkan misal Data 1, untuk setiap input");
         System.out.println("SEPATU: SNEAKERS DAN SPORT                        ");
-        System.out.println("(note : tambah nomer di belakang nama sepatu)     ");
         System.out.println("BAHAN : KULIT SAPI & BABI                         ");
         System.out.println("UKURAN: 30 - 45                                   ");
         System.out.println("==================================================");
@@ -112,7 +110,6 @@ public class MethodDataSepatu extends DataSepatu {
         System.out.println("==================================================");
         System.out.println("Id    : (masukkan misal Data 1, untuk setiap input");
         System.out.println("SEPATU: SNEAKERS DAN SPORT                        ");
-        System.out.println("(note : tambah nomer di belakang nama sepatu)     ");
         System.out.println("BAHAN : KULIT SAPI & BABI                         ");
         System.out.println("UKURAN: 30 - 45                                   ");
         System.out.println("==================================================");
