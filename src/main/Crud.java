@@ -5,43 +5,43 @@ import model.MethodDataSepatu;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-public class Crud extends Login{
-    String username,password;
+public class Crud extends Login {
+    String username, password;
     Scanner input = new Scanner(System.in);
-    Login data = new Login ();
+    Login data = new Login();
     MethodDataSepatu data1 = new MethodDataSepatu();
-    ArrayList <Login> data2 = new ArrayList <>();
+    ArrayList<Login> data2 = new ArrayList<>();
+
     public Crud() {
         super();
     }
 
 
-    public void inputLogin(){
-        if(data2.isEmpty()){
+    public void inputLogin() {
+        if (data2.isEmpty()) {
             System.err.println("== DATA LOGIN EMPTY ==");
-        }
-        else{
+        } else {
             System.out.print("Enter Username : ");
             username = input.nextLine();
             System.out.print("Enter Password : ");
             password = input.nextLine();
-            if(data.getUsername().equals(username)&&data.getPassword().equals(password)){
+            if (data.getUsername().equals(username) && data.getPassword().equals(password)) {
                 menu();
-            }
-            else{
+            } else {
                 System.out.println("Invalid Username & Password!");
             }
         }
     }
 
-    public void inputUser(){
+    public void inputUser() {
         System.out.print("Enter Username : ");
         username = input.nextLine();
         System.out.print("Enter Password : ");
         password = input.nextLine();
-        data = new Login(username,password);
+        data = new Login(username, password);
         data2.add(data);
     }
+
     public void login() {
         String choice;
         do {
@@ -64,7 +64,7 @@ public class Crud extends Login{
                 case "3" -> System.out.println("Leave...");
                 default -> System.err.print("Wrong input!!!!");
             }
-        }while (!choice.equals("3"));
+        } while (!choice.equals("3"));
     }
 
     public void menu() {
@@ -93,7 +93,7 @@ public class Crud extends Login{
                 case "5" -> System.out.println("Back...");
                 default -> System.err.print("Wrong input!!!!");
             }
-        }while (!choice.equals("5"));
+        } while (!choice.equals("5"));
     }
 }
 
