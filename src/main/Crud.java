@@ -5,16 +5,13 @@ import model.MethodDataSepatu;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-public class Crud extends Login {
+public class Crud  {
     String username, password;
     Scanner input = new Scanner(System.in);
     Login data = new Login();
     MethodDataSepatu data1 = new MethodDataSepatu();
     ArrayList<Login> data2 = new ArrayList<>();
 
-    public Crud() {
-        super();
-    }
     public void inputLogin() {
         if (data2.isEmpty()) {
             System.err.println("== DATA LOGIN EMPTY ==");

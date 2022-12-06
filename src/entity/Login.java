@@ -1,5 +1,5 @@
 package entity;
-public class Login {
+public class Login{
     private String Username,Password;
 
     public Login(String Username, String Password) {
