@@ -1,7 +1,6 @@
 package entity;
 public class Login {
-    private String Username;
-    private String Password;
+    private String Username,Password;
 
     public Login(String Username, String Password) {
         this.Username = Username;

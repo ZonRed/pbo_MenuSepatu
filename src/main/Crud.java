@@ -15,8 +15,6 @@ public class Crud extends Login {
     public Crud() {
         super();
     }
-
-
     public void inputLogin() {
         if (data2.isEmpty()) {
             System.err.println("== DATA LOGIN EMPTY ==");
