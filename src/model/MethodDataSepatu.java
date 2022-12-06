@@ -1,7 +1,7 @@
 package model;
 
 import entity.DataSepatu;
-import entity.Jenis_Sepatu;
+import entity.JenisSepatu;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,7 +10,7 @@ public class MethodDataSepatu {
     String Sepatu,Bahan,Id,Jenis;
     int Ukuran;
     ArrayList <DataSepatu> data1 = new ArrayList<>();
-    ArrayList <Jenis_Sepatu> data2 = new ArrayList<>();
+    ArrayList <JenisSepatu> data2 = new ArrayList<>();
     Scanner in = new Scanner(System.in);
     public void input(){
         System.out.println("==================================================");
