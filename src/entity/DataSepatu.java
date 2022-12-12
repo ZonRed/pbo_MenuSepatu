@@ -1,34 +1,20 @@
 package entity;
 
 public class DataSepatu {
-    private String Sepatu,Id,Bahan;
+    private String Id,Bahan;
     private int Ukuran;
-    public DataSepatu(String Sepatu, String Bahan,String Id, int Ukuran) {
-        this.Sepatu = Sepatu;
+    public DataSepatu(String Bahan,String Id, int Ukuran) {
         this.Bahan = Bahan;
         this.Ukuran = Ukuran;
         this.Id = Id;
     }
 
-    public DataSepatu() {
-
-    }
     public String getId() {
         return Id;
     }
-
     public void setId(String Id) {
         this.Id = Id;
     }
-
-    public String getSepatu() {
-        return Sepatu;
-    }
-
-    public void setSepatu(String Sepatu) {
-        this.Sepatu = Sepatu;
-    }
-
     public String getBahan() {
         return Bahan;
     }

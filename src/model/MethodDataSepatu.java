@@ -1,38 +1,35 @@
 package model;
 
-import entity.DataSepatu;
+import entity.JenisSepatu;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MethodDataSepatu {
-    String Sepatu,Bahan,Id;
+    String Bahan,Id,Sneakers,Sport;
     int Ukuran;
-    ArrayList <DataSepatu> data1 = new ArrayList<>();
+    ArrayList <JenisSepatu> data1 = new ArrayList<>();
     Scanner in = new Scanner(System.in);
-    public MethodDataSepatu() {
-        super();
-    }
 
     public void input(){
-        System.out.println("==================================================");
-        System.out.println("Id    : (masukkan misal Data 1, untuk setiap input");
-        System.out.println("SEPATU: SNEAKERS DAN SPORT                        ");
-        System.out.println("(note : tambah nomer di belakang nama sepatu)     ");
-        System.out.println("BAHAN : KULIT SAPI & BABI                         ");
-        System.out.println("UKURAN: 30 - 45                                   ");
-        System.out.println("==================================================");
-        System.out.print("Id     : ");
+        System.out.println("====================================================");
+        System.out.println("Id      :(masukkan misal Data 1, untuk setiap input)");
+        System.out.println("SNEAKERS:(ISI BERAPA YANG MAU DI AMBIL)             ");
+        System.out.println("SPORT   :(ISI BERAPA YANG MAU DI AMBIL)             ");
+        System.out.println("BAHAN   :KULIT SAPI & BABI                          ");
+        System.out.println("UKURAN  :30 - 45                                    ");
+        System.out.println("====================================================");
+        System.out.print("Id      : ");
         Id = in.nextLine();
-        System.out.print("Sepatu : ");
-        Sepatu = in.nextLine();
-        System.out.print("Bahan  : ");
+        System.out.print("Sneakers: ");
+        Sneakers = in.nextLine();
+        System.out.print("Sport: ");
+        Sport = in.nextLine();
+        System.out.print("Bahan   : ");
         Bahan = in.nextLine();
-        System.out.print("ukuran : ");
+        System.out.print("ukuran  : ");
         Ukuran = in.nextInt();
-        System.out.println("==============================");
         in.nextLine();
-
-        DataSepatu data = new DataSepatu(Sepatu,Bahan,Id,Ukuran);
+        JenisSepatu data = new JenisSepatu(Sneakers,Sport,Bahan,Id,Ukuran);
         data1.add(data);
     }
 
@@ -41,12 +38,13 @@ public class MethodDataSepatu {
             System.out.println("Data Is Empty");
         }
         else{
-            for(DataSepatu viewdata : data1){
+            for(JenisSepatu viewdata : data1){
                 System.out.println("============================");
                 System.out.println("Data sepatu");
                 System.out.println("============================");
                 System.out.println("Id      : " + viewdata.getId());
-                System.out.println("Sepatu  : " + viewdata.getSepatu());
+                System.out.println("Sneakers: " + viewdata.getSneakers());
+                System.out.println("Sport   : " + viewdata.getSport());
                 System.out.println("Bahan   : " + viewdata.getBahan());
                 System.out.println("Ukuran  : " + viewdata.getUkuran());
                 System.out.println("============================");
@@ -54,8 +52,8 @@ public class MethodDataSepatu {
         }
     }
 
-    public DataSepatu SearchDataSepatu (String Id){
-        for (DataSepatu dataid : data1){
+    public JenisSepatu SearchJenisSepatu (String Id){
+        for (JenisSepatu dataid : data1){
             if(dataid.getId().equals(Id)){
                 return dataid;
             }
@@ -63,40 +61,42 @@ public class MethodDataSepatu {
         return null;
     }
 
-    public void Searchdata(DataSepatu DataSearch) {
+    public void Searchdata(JenisSepatu DataSearch) {
         int index = indexData(DataSearch);
         data1.get(index).setId(DataSearch.getId());
-        data1.get(index).setSepatu(DataSearch.getSepatu());
+        data1.get(index).setSneakers(DataSearch.getSneakers());
+        data1.get(index).setSport(DataSearch.getSport());
         data1.get(index).setBahan(DataSearch.getBahan());
         data1.get(index).setUkuran(DataSearch.getUkuran());
     }
 
-    public void editDataSepatu() {
+    public void editJenisSepatu() {
         String Choice;
         Searchdata();
-        System.out.println("==================================================");
-        System.out.println("Id    : (masukkan misal Data 1, untuk setiap input");
-        System.out.println("SEPATU: SNEAKERS DAN SPORT                        ");
-        System.out.println("(note : tambah nomer di belakang nama sepatu)     ");
-        System.out.println("BAHAN : KULIT SAPI & BABI                         ");
-        System.out.println("UKURAN: 30 - 45                                   ");
-        System.out.println("==================================================");
+        System.out.println("====================================================");
+        System.out.println("Id      :(masukkan misal Data 1, untuk setiap input)");
+        System.out.println("SNEAKERS:(ISI BERAPA YANG MAU DI AMBIL)             ");
+        System.out.println("SPORT   :(ISI BERAPA YANG MAU DI AMBIL)             ");
+        System.out.println("BAHAN   :KULIT SAPI & BABI                          ");
+        System.out.println("UKURAN  :30 - 45                                    ");
+        System.out.println("====================================================");
         System.out.print("Search Id for edit : ");
         Choice = in.nextLine();
-        DataSepatu DataSearch = SearchDataSepatu(Choice);
+        JenisSepatu DataSearch = SearchJenisSepatu(Choice);
         if(DataSearch!=null){
             System.out.println("==============================");
-            System.out.print("Id          : ");
-            Id = in.nextLine();
-            System.out.print("Sepatu Baru : ");
-            Sepatu = in.nextLine();
-            System.out.print("Bahan Baru  : ");
+            System.out.print("Sneakers Baru : ");
+            Sneakers = in.nextLine();
+            System.out.print("Sport Baru    : ");
+            Sport = in.nextLine();
+            System.out.print("Bahan Baru    : ");
             Bahan = in.nextLine();
-            System.out.print("Ukuran Baru : ");
+            System.out.print("Ukuran Baru   : ");
             Ukuran = in.nextInt();
+            in.nextLine();
             System.out.println("==============================");
-            DataSearch.setSepatu(Id);
-            DataSearch.setSepatu(Sepatu);
+            DataSearch.setSneakers(Sneakers);
+            DataSearch.setSport(Sport);
             DataSearch.setBahan(Bahan);
             DataSearch.setUkuran(Ukuran);
             Searchdata(DataSearch);
@@ -108,17 +108,17 @@ public class MethodDataSepatu {
 
     public void MenuDelete() {
         String Choice;
-        System.out.println("==================================================");
-        System.out.println("Id    : (masukkan misal Data 1, untuk setiap input");
-        System.out.println("SEPATU: SNEAKERS DAN SPORT                        ");
-        System.out.println("(note : tambah nomer di belakang nama sepatu)     ");
-        System.out.println("BAHAN : KULIT SAPI & BABI                         ");
-        System.out.println("UKURAN: 30 - 45                                   ");
-        System.out.println("==================================================");
+        System.out.println("====================================================");
+        System.out.println("Id      :(masukkan misal Data 1, untuk setiap input)");
+        System.out.println("SNEAKERS:(ISI BERAPA YANG MAU DI AMBIL)             ");
+        System.out.println("SPORT   :(ISI BERAPA YANG MAU DI AMBIL)             ");
+        System.out.println("BAHAN   :KULIT SAPI & BABI                          ");
+        System.out.println("UKURAN  :30 - 45                                    ");
+        System.out.println("====================================================");
         System.out.print("Search Id For Delete : ");
         Choice = in.nextLine();
         System.out.println("==============================");
-        DataSepatu DataSearch = SearchDataSepatu(Choice);
+        JenisSepatu DataSearch = SearchJenisSepatu(Choice);
         if(DataSearch!=null){
             Clear(DataSearch);
             System.out.println("data " +DataSearch.getId()+ " Clear Done");
@@ -128,11 +128,11 @@ public class MethodDataSepatu {
         }
     }
 
-    public void Clear(DataSepatu DataSearch){
+    public void Clear(JenisSepatu DataSearch){
         data1.remove(DataSearch);
     }
 
-    public int indexData(DataSepatu DataSearch){
+    public int indexData(JenisSepatu DataSearch){
         return data1.indexOf(DataSearch);
     }
 }

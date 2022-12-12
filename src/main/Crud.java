@@ -83,7 +83,7 @@ public class Crud  {
             switch (choice) {
                 case "1" -> data1.input();
                 case "2" -> data1.Searchdata();
-                case "3" -> data1.editDataSepatu();
+                case "3" -> data1.editJenisSepatu();
                 case "4" -> data1.MenuDelete();
                 case "5" -> System.out.println("Back...");
                 default -> System.err.print("Wrong input!!!!");
