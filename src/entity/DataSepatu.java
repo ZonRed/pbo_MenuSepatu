@@ -1,6 +1,6 @@
 package entity;
 
-public class DataSepatu {
+public abstract class DataSepatu {
     private String Id,Bahan;
     private int Ukuran;
     public DataSepatu(String Bahan,String Id, int Ukuran) {
@@ -8,7 +8,6 @@ public class DataSepatu {
         this.Ukuran = Ukuran;
         this.Id = Id;
     }
-
     public String getId() {
         return Id;
     }
@@ -31,4 +30,11 @@ public class DataSepatu {
         this.Ukuran = Ukuran;
     }
 
+    public abstract String getSneakers();
+
+    public abstract void setSneakers(String Sneakers);
+
+    public abstract String getSport();
+
+    public abstract void setSport(String Sport);
 }
