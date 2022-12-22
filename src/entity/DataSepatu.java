@@ -8,7 +8,6 @@ public class DataSepatu {
         this.Ukuran = Ukuran;
         this.Id = Id;
     }
-
     public String getId() {
         return Id;
     }
