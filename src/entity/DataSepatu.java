@@ -17,19 +17,17 @@ public abstract class DataSepatu {
     public String getBahan() {
         return Bahan;
     }
-
     public void setBahan(String Bahan) {
         this.Bahan = Bahan;
     }
-
     public int getUkuran() {
         return Ukuran;
     }
-
     public void setUkuran(int Ukuran) {
         this.Ukuran = Ukuran;
     }
 
+    //class abstract
     public abstract String getSneakers();
 
     public abstract void setSneakers(String Sneakers);

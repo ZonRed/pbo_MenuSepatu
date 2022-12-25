@@ -7,6 +7,7 @@ public class JenisSepatu extends DataSepatu {
         this.Sneakers = Sneakers;
         this.Sport = Sport;
     }
+    //penerapan override
     @Override
     public String getSneakers() {
         return Sneakers;
