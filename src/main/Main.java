@@ -1,7 +1,11 @@
 package main;
+
+import model.AdminModel;
+import controller.AdminController;
 public class Main {
     public static void main(String[] args){
-        Crud crud = new Crud();
-        crud.login();
+        AdminModel.initialData();
+        AdminController admin = new AdminController();
+        admin.toMain();
     }
 }

@@ -8,6 +8,8 @@ public abstract class DataSepatu {
         this.Ukuran = Ukuran;
         this.Id = Id;
     }
+    public DataSepatu() {
+    }
     public String getId() {
         return Id;
     }
