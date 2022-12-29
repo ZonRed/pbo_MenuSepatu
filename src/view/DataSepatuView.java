@@ -50,7 +50,7 @@ public class DataSepatuView {
         String Id = input.nextLine();
         System.out.print("Sneakers: ");
         String Sneakers = input.nextLine();
-        System.out.print("Sport: ");
+        System.out.print("Sport   : ");
         String Sport = input.nextLine();
         System.out.print("Bahan   : ");
         String Bahan = input.nextLine();
